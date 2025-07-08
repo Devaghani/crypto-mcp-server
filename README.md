@@ -125,3 +125,4 @@ Copyright (c) 2025 Rosendo.
 - crypto
 - trading
 - crypto-tool
+- Crypto MCP
